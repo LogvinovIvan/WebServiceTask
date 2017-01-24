@@ -5,5 +5,5 @@ import com.epam.lab.ticket.manager.exception.DaoException;
 
 
 public interface TicketDao extends Dao<Ticket,Long> {
-    boolean payForTicket(Ticket ticket) throws DaoException;
+    boolean updateStatusOfTicket(Long idTicket) throws DaoException;
 }

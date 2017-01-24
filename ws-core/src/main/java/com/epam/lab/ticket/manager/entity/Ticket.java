@@ -12,8 +12,10 @@ public class Ticket {
 
     @Id
     @Column(name = "ticketId")
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long numberTicket;
+
+
     @Column(name = "departureCity")
     private String departureCity;
     @Column(name = "arrivalCity")
@@ -28,7 +30,7 @@ public class Ticket {
     private StateTicket state;
 
     @ManyToOne
-    @JoinColumn(name = "personId")
+    @JoinColumn(name = "person_id_person")
     private Person person;
 
     public Long getNumberTicket() {

@@ -14,4 +14,13 @@ import javax.jws.soap.SOAPBinding;
 public interface TicketService {
     @WebMethod(operationName = "getTicketById")
     Ticket getTicket(Long id);
+
+    @WebMethod
+    Long bookTicket(Ticket ticket);
+
+    @WebMethod
+    boolean returnTicket(Long idTicket);
+
+    @WebMethod
+    boolean payForTheTicket(Long idTicket);
 }

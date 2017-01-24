@@ -2,6 +2,7 @@ package com.epam.lab.ticket.manager.entity;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Ivan_Lohvinau on 1/23/2017.
@@ -10,17 +11,25 @@ import java.util.Date;
 @Table(name = "Person")
 public class Person {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "person_seq")
+    @SequenceGenerator(name = "person_seq", sequenceName = "PERSON_SEQ",allocationSize=1 )
+    @Column(name = "id_person", nullable = false)
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String name;
-    @Column(name = "surname")
+
+    @Column(name = "surname", nullable = false)
     private String surname;
-    @Column(name = "patronymic")
+
+    @Column(name = "patronymic", nullable = false)
     private String patronymic;
-    @Column(name = "birthDaye")
+
+    @Column(name = "birthDay", nullable = false)
     private Date birthDay;
+
+    @OneToMany
+    private List<Ticket> tickets;
 
 
     public String getName() {
@@ -61,5 +70,13 @@ public class Person {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public List<Ticket> getTickets() {
+        return tickets;
+    }
+
+    public void setTickets(List<Ticket> tickets) {
+        this.tickets = tickets;
     }
 }

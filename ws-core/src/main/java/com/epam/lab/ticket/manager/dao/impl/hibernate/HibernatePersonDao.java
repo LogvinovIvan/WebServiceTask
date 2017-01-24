@@ -25,11 +25,11 @@ public class HibernatePersonDao implements PersonDao {
         return person;
     }
 
-    public Long add(Person perosn) throws DaoException {
+    public Long add(Person person) throws DaoException {
         Session session = factory.getCurrentSession();
         Long idPerson;
         try {
-            idPerson = (Long) session.save(perosn);
+            idPerson = (Long) session.save(person);
         } catch (HibernateException e) {
             throw new DaoException(e);
         }
