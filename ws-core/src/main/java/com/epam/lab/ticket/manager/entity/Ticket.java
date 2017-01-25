@@ -1,18 +1,23 @@
 package com.epam.lab.ticket.manager.entity;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 
-/**
- * Created by Ivan_Lohvinau on 1/23/2017.
- */
+
 @Entity
 @Table(name = "Ticket")
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Ticket {
 
     @Id
     @Column(name = "ticketId")
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @XmlElement
     private Long numberTicket;
 
 
@@ -27,11 +32,13 @@ public class Ticket {
     @Column(name = "arrivalTime")
     private Date arrivalTime;
     @Enumerated(EnumType.STRING)
+    @Column(name = "state")
     private StateTicket state;
 
     @ManyToOne
     @JoinColumn(name = "person_id_person")
     private Person person;
+
 
     public Long getNumberTicket() {
         return numberTicket;
@@ -89,6 +96,7 @@ public class Ticket {
         this.state = state;
     }
 
+    @Transient
     public Person getPerson() {
         return person;
     }

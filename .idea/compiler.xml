@@ -24,12 +24,6 @@
         <processorPath useClasspath="true" />
         <module name="ws-rest-json" />
         <module name="ws-rest-text" />
-      </profile>
-      <profile default="false" name="Annotation profile for ws-soap" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="ws-soap" />
       </profile>
       <profile default="false" name="Annotation profile for ws-core" enabled="true">
@@ -40,12 +34,12 @@
         <module name="ws-core" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="Tak3" target="1.5" />
       <module name="ws-core" target="1.8" />
       <module name="ws-rest-json" target="1.5" />
       <module name="ws-rest-text" target="1.5" />
-      <module name="ws-soap" target="1.8" />
+      <module name="ws-soap" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

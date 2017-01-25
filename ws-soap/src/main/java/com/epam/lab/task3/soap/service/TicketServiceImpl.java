@@ -14,8 +14,9 @@ import javax.jws.WebService;
  * Created by Ivan_Lohvinau on 1/23/2017.
  */
 @WebService(endpointInterface = "com.epam.lab.task3.soap.service.TicketService", name = "TicketServiceImpl_")
-@Component
+
 public class TicketServiceImpl implements TicketService {
+
 
 
     @Autowired
