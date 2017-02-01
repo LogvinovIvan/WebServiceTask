@@ -34,7 +34,7 @@ public class HibernateTicketDao implements TicketDao {
 
             Criteria criteria = session.createCriteria(Ticket.class);
 
-            Criterion idCriterion = Restrictions.eq("ticketId",idTicket);
+            Criterion idCriterion = Restrictions.eq("numberTicket",idTicket);
             Criterion statusCriterion = Restrictions.eq("state",StateTicket.BOOKED);
 
 
@@ -60,6 +60,7 @@ public class HibernateTicketDao implements TicketDao {
         Ticket ticket;
         try {
             ticket = (Ticket) session.get(Ticket.class, key);
+            if(ticket==null) ticket = new Ticket();
         } catch (HibernateException e) {
             throw new DaoException(e);
         }

@@ -31,7 +31,7 @@ public class Person {
     @Column(name = "birthDay", nullable = false)
     private Date birthDay;
 
-    @OneToMany
+    @Transient
     private List<Ticket> tickets;
 
 

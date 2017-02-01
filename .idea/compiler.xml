@@ -22,6 +22,7 @@
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="client-soap" />
         <module name="ws-rest-json" />
         <module name="ws-rest-text" />
         <module name="ws-soap" />
@@ -35,6 +36,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="client-soap" target="1.5" />
       <module name="Tak3" target="1.5" />
       <module name="ws-core" target="1.8" />
       <module name="ws-rest-json" target="1.5" />

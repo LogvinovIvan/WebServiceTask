@@ -1,38 +1,47 @@
 package com.epam.lab.ticket.manager.entity;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 import java.util.Date;
 
 
 @Entity
 @Table(name = "Ticket")
 @XmlRootElement
+@XmlType()
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Ticket {
 
     @Id
     @Column(name = "ticketId")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @XmlElement
+    @XmlElement(required = true)
     private Long numberTicket;
 
 
     @Column(name = "departureCity")
+    @XmlElement(required = true, nillable = true)
     private String departureCity;
+
     @Column(name = "arrivalCity")
+    @XmlElement(required = true, nillable = true)
     private String arrivalCity;
+
     @Column(name = "cost")
+    @XmlElement(required = true)
     private Integer cost;
+
     @Column(name = "departureTime")
+    @XmlElement(required = true)
     private Date departureTime;
+
     @Column(name = "arrivalTime")
+    @XmlElement(required = true)
     private Date arrivalTime;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "state")
+    @XmlElement(required = true)
     private StateTicket state;
 
     @ManyToOne

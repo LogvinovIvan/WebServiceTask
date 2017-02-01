@@ -13,6 +13,7 @@
         <module>ws-core</module>
         <module>ws-rest-json</module>
         <module>ws-rest-text</module>
+        <module>client-soap</module>
     </modules>
 
 

@@ -4,22 +4,6 @@
 		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-    <context-param>
-        <param-name>contextClass</param-name>
-        <param-value>
-            org.springframework.web.context.support.AnnotationConfigWebApplicationContext
-        </param-value>
-    </context-param>
-
-
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>com.epam.lab.task3.soap.config.AppConfig</param-value>
-    </context-param>
-
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
 
 
     <listener>
@@ -39,4 +23,5 @@
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
+
 </web-app>
