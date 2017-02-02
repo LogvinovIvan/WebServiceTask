@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/client-soap/client-soap.iml" filepath="$PROJECT_DIR$/client-soap/client-soap.iml" />
       <module fileurl="file://$PROJECT_DIR$/ws-core/ws-core.iml" filepath="$PROJECT_DIR$/ws-core/ws-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/ws-rest-json/ws-rest-json.iml" filepath="$PROJECT_DIR$/ws-rest-json/ws-rest-json.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ws-rest-text/ws-rest-text.iml" filepath="$PROJECT_DIR$/ws-rest-text/ws-rest-text.iml" />
       <module fileurl="file://$PROJECT_DIR$/ws-soap/ws-soap.iml" filepath="$PROJECT_DIR$/ws-soap/ws-soap.iml" />
     </modules>
   </component>

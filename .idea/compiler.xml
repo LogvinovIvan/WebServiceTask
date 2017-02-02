@@ -24,7 +24,6 @@
         <processorPath useClasspath="true" />
         <module name="client-soap" />
         <module name="ws-rest-json" />
-        <module name="ws-rest-text" />
         <module name="ws-soap" />
       </profile>
       <profile default="false" name="Annotation profile for ws-core" enabled="true">
@@ -34,9 +33,16 @@
         <processorPath useClasspath="true" />
         <module name="ws-core" />
       </profile>
+      <profile default="false" name="Annotation profile for com.epam.lab.task3.rest.text" enabled="true">
+        <sourceOutputDir name="ws-rest-text/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="ws-rest-text\target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="client-soap" target="1.5" />
+      <module name="com.epam.lab.task3.rest.text" target="1.5" />
       <module name="Tak3" target="1.5" />
       <module name="ws-core" target="1.8" />
       <module name="ws-rest-json" target="1.5" />

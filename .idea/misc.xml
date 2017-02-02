@@ -11,7 +11,6 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/ws-core/pom.xml" />
-        <option value="$PROJECT_DIR$/ws-rest-text/pom.xml" />
         <option value="$PROJECT_DIR$/ws-rest-json/pom.xml" />
         <option value="$PROJECT_DIR$/ws-soap/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
