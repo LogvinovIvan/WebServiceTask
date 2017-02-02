@@ -1,6 +1,5 @@
 package com.epam.lab.ticket.manager.test.dao.config;
 
-import com.github.springtestdbunit.bean.DatabaseConfigBean;
 import com.github.springtestdbunit.bean.DatabaseDataSourceConnectionFactoryBean;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,6 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
 
 import javax.sql.DataSource;
 import java.util.Properties;
