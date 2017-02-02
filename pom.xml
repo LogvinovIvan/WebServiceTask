@@ -11,8 +11,7 @@
     <modules>
         <module>ws-soap</module>
         <module>ws-core</module>
-        <module>ws-rest-json</module>
-        <module>ws-rest-text</module>
+        <module>ws-rest</module>
         <module>client-soap</module>
     </modules>
 

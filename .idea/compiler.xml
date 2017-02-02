@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="client-soap" />
+        <module name="ws-rest" />
         <module name="ws-rest-json" />
         <module name="ws-soap" />
       </profile>
@@ -45,6 +46,7 @@
       <module name="com.epam.lab.task3.rest.text" target="1.5" />
       <module name="Tak3" target="1.5" />
       <module name="ws-core" target="1.8" />
+      <module name="ws-rest" target="1.5" />
       <module name="ws-rest-json" target="1.5" />
       <module name="ws-rest-text" target="1.5" />
       <module name="ws-soap" target="1.5" />
